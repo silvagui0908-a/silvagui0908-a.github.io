@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <title>Portefólio Pessoal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design.css">
+    <script src="func.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <button class="tab-btn active" onclick="showTab('inicio', this)">Início</button>
+            <button class="tab-btn" onclick="showTab('sobre-mim', this)">Sobre Mim</button>
+            <button class="tab-btn" onclick="showTab('sumarios', this)">Sumários</button>
+            <button class="tab-btn" onclick="showTab('bibliografia', this)">Bibliografia</button>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="inicio">
+            <h1>ePortefólio de Guilherme Silva</h1>
+            <p>Bem-vindo ao meu portefólio! Aqui podes encontrar informações sobre mim e os sumários das aulas que tive.</p>
+            <img src="imgs/—Pngtree—abstract white technology_8796924.png" alt="wave1" width="1000px">
+        </div>
+        <div id="sobre-mim" style="display:none;">
+            <h2>Sobre Mim</h2>
+            <p>
+                Olá! Sou estudante de Aplicações Informáticas e este é o meu portefólio onde partilho o meu percurso académico e os sumários das aulas que frequentei.
+            </p>
+        </div>
+        <div id="sumarios" style="display:none;">
+            <h2>Sumários das Aulas</h2>
+            <div class="sumarios-grid">
+                <div class="sumario-card" onclick="showAulaDetalhe(1)">
+                    <h3>Aula 1: Apresentação</h3>
+                    <p>Apresentação do professor e dos alunos.</p>
+                    <span class="sumario-data">Data: 18/09/2025</span>
+                </div>
+                <div class="sumario-card" onclick="showAulaDetalhe(2)">
+                    <h3>Aula 2: Introdução aos conceitos fundamentais</h3>
+                    <p>Exemplificação inicial e breve exploração prática.</p>
+                    <span class="sumario-data">Data: 19/09/2025</span>
+                </div>
+                <div class="sumario-card" onclick="showAulaDetalhe(3)">
+                    <h3>Aula 3: Introdução ao ePortfólio</h3>
+                    <p>Organização inicial do trabalho dos alunos.</p>
+                    <span class="sumario-data">Data: 19/09/2025</span>
+                </div>
+                <div class="sumario-card" onclick="showAulaDetalhe(4)">
+                    <h3>Aula 4: Resolução de exercícios práticos</h3>
+                    <p>Consolidar os conteúdos abordados até ao momento.</p>
+                    <span class="sumario-data">Data: 25/09/2025</span>
+                </div>
+                <div class="sumario-card" onclick="showAulaDetalhe(5)">
+                    <h3>Aula 5: Resolução de exercícios práticos</h3>
+                    <p>Consolidar os conteúdos abordados até ao momento.</p>
+                    <span class="sumario-data">Data: 26/09/2025</span>
+                </div>
+                <div class="sumario-card" onclick="showAulaDetalhe(6)">
+                    <h3>Aula 6: Resolução de exercícios práticos</h3>
+                    <p>Consolidar os conteúdos abordados até ao momento.</p>
+                    <span class="sumario-data">Data: 26/09/2025</span>
+                </div>
+            </div>
+        </div>
+        <div id="bibliografia" style="display:none;">
+            <h2>Bibliografia</h2>
+            <ul class="bibliografia-list">
+                <li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+                <li><a href="https://copilot.microsoft.com/" target="_blank">Copilot</a></li>
+                <li><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></li>
+                <li><a href="https://pngtree.com/" target="_blank">PNGTREE</a></li>
+            </ul>
+        </div>
+        <div id="aula-detalhe" style="display:none;">
+            <button class="btn" onclick="voltarSumarios()" style="margin-bottom:24px;">← Voltar aos Sumários</button>
+            <div id="aula-detalhe-conteudo"></div>
+        </div>
+    </div>
+    <div class="footer-separator"></div>
+    <footer>
+        <div class="footer-content">
+            <span>Guilherme Silva &nbsp;|&nbsp; Email: 60520@esjf.edu.pt &nbsp;|&nbsp; Professor: João Leal</span>
+        </div>
+    </footer>
+</body>
+</html>

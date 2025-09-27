@@ -1,0 +1,427 @@
+/* Reset some default styles */
+@charset "UTF-8";
+/* Troque a importação da fonte para uma mais fina e elegante */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    background: #fff; /* Fundo branco no meio */
+    color: #18191b;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/* NAVIGATION */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 88px;
+    background: #0A0A0B;
+    z-index: 100;
+    box-shadow: none;
+    border-radius: 0;
+    letter-spacing: 2px;
+    /* Faixa preta ocupa toda a largura */
+    /* O conteúdo dos botões será limitado por um wrapper interno */
+}
+
+.nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 32px;
+    padding: 0 40px;
+}
+
+/* Ajuste para os botões não saírem da faixa preta */
+.tab-btn {
+    background: none;
+    color: #fff;
+    border: none;
+    border-bottom: 2.5px solid transparent;
+    padding: 18px 12px 8px 12px; /* topo, lados, baixo */
+    font-size: 0.75rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: border-bottom 0.2s, color 0.2s;
+    border-radius: 0;
+    outline: none;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: flex-end; /* texto encostado em baixo */
+    text-transform: uppercase;
+    min-width: 0;
+    max-width: 120px;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+/* Mantém a faixa azul ao hover/ativo */
+.tab-btn.active,
+.tab-btn:hover {
+    color: #3a86ff;
+    border-bottom: 2.5px solid #3a86ff;
+    background: none;
+}
+
+/* Container for content */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: none;
+    color: #18191b;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 120px 40px 40px 40px; /* espaço para nav fixa */
+    min-height: 70vh;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #18191b; /* Títulos pretos */
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: 4.25rem;         /* Bem maior */
+    font-weight: 700;          /* Bem mais grosso */
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+    line-height: 1.1;
+    width: 100%;
+    text-align: center;
+    word-break: break-word;
+}
+
+h2 {
+    font-size: 4.4662rem;         /* Bem maior */
+    font-weight: 700;          /* Bem mais grosso */
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+    line-height: 1.1;
+    width: 100%;
+    text-align: center;
+    word-break: break-word;
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-weight: 1000;
+    margin-bottom: 8px;
+}
+
+/* Paragraphs */
+p {
+    line-height: 1.7;
+    margin-bottom: 18px;
+    font-size: 1.08rem;
+    color: #18191b;
+    font-weight: 400;
+}
+
+/* Links */
+a {
+    color: #3a86ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    border-bottom: 1.5px solid transparent;
+}
+
+a:hover {
+    color: #18191b;
+    border-bottom: 1.5px solid #3a86ff;
+}
+
+/* Grid and Card styles for Sumarios */
+.sumarios-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 32px;
+    width: 100%;
+}
+
+.sumario-card {
+    display: flex;
+    flex-direction: column;       /* mantém título, resumo e data em coluna */
+    justify-content: space-between;
+    border: 1.5px solid #e5e5e5;
+    border-left: 5px solid #18191b;
+    border-radius: 18px;
+    padding: 32px 48px;           /* mantém padding original */
+    min-height: 120px;            /* altura uniforme */
+    width: 100%;                   /* ocupa 100% do container */
+    box-sizing: border-box;
+    cursor: pointer;
+    gap: 12px;
+    transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+.sumario-card:hover {
+    border-color: #3a86ff;
+    box-shadow: 0 2px 16px rgba(58,134,255,0.07);
+}
+
+.sumario-card h3 {
+    font-weight: bolder;
+    font-size: 1.18rem;
+    color: #18191b;
+    margin-bottom: 6px;
+    word-break: break-word;
+}
+
+.sumario-card p {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #18191b;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.sumario-data {
+    font-size: 0.97rem;
+    color: #3a86ff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    align-self: flex-end;        /* mantém a data à direita */
+}
+
+/* Footer styles */
+.footer-separator {
+    width: 100vw;
+    height: 3px;
+    background: #303030;
+    position: fixed;
+    left: 0;
+    bottom: 48px;
+    z-index: 101;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 -1px 6px rgba(60,90,130,0.07);
+}
+
+footer {
+    width: 100vw;
+    background: #0A0A0B; /* Mantém a cor escura do rodapé */
+    color: #f3f3f3;
+    padding: 18px 0 12px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: none;
+    z-index: 100;
+    border-radius: 0;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f3f3f3;
+    position: relative;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+/* Remove faixa branca central do rodapé */
+footer::before {
+    display: none !important;
+}
+.footer-content span {
+    color: #f3f3f3;
+    font-weight: 500;
+    z-index: 1;
+}
+
+/* Buttons */
+button, .btn {
+    background: none;
+    color: #202020;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 36px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    margin-top: 12px;
+}
+
+button:hover, .btn:hover {
+    background: none;
+    transform: translateY(-2px) scale(1.03);
+}
+
+/* Section transitions */
+#sumarios, #sobre-mim, #inicio {
+    animation: fadeIn 0.7s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(24px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .container {
+        padding: 120px 12px 40px 12px;
+    }
+    nav {
+        padding: 0 8px;
+    }
+    .sumario-card {
+        padding: 24px 10px;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        gap: 12px;
+        height: auto;
+        padding: 0 4px;
+    }
+    .tab-btn {
+        padding: 8px 10px;
+        font-size: 1rem;
+        height: 48px;
+    }
+    .container {
+        padding: 100px 4px 24px 4px;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+    button, .btn, .tab-btn {
+        font-size: 1rem;
+        padding: 10px 16px;
+    }
+    footer {
+        font-size: 0.92rem;
+        padding: 12px 0 8px 0;
+    }
+    .footer-content {
+        padding: 0 4px;
+    }
+}
+
+/* Para telas grandes, deixar as caixas ainda mais largas */
+
+
+/* Para telas pequenas, ocupar toda a largura possível */
+@media (max-width: 700px) {
+    .sumario-card {
+        min-width: 0;
+        width: 100%;
+        padding: 18px 10px 18px 10px;
+    }
+}
+
+/* LOGO no canto superior esquerdo */
+.logo {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.logo img {
+    height: 42px; /* ajusta o tamanho do ícone */
+    width: auto;
+    transition: transform 0.2s;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+/* Remove o espaço extra entre o logo e os botões */
+
+.materiais-opiniao {
+    display: flex;
+    flex-wrap: wrap; /* permite quebrar em telas pequenas */
+    gap: 32px;
+    margin-top: 18px;
+}
+
+.materiais {
+    flex: 1 1 300px; /* ocupa o espaço disponível */
+}
+
+.opiniao {
+    flex: 1 1 250px; /* ocupa o espaço restante à direita */
+    background: #f0f8ff; /* cor de fundo suave para destacar */
+    border-left: 3px solid #3a86ff;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.opiniao h3 {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #18191b;
+    font-weight: 700;
+}
+
+.opiniao p {
+    font-size: 1rem;
+    color: #18191b;
+    line-height: 1.6;
+}
+
+#aula-detalhe > .btn {
+    display: block;        /* garante que respeite a largura */
+    margin: 0 0 24px -38px;    /* topo 0, direita 0, baixo 24px, esquerda 0 */
+    padding: 12px 36px;    /* mantém padding do botão */
+    text-align: left;       /* alinha o conteúdo do botão à esquerda, se houver texto longo */
+}
+
+.bibliografia-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bibliografia-list li a {
+    color: #3a86ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.bibliografia-list li a:hover {
+    color: #18191b;
+}
+
+
+
