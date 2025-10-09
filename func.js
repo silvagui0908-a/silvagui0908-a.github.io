@@ -57,7 +57,7 @@ const aulasDetalhes = {
             { nome: "Apresentação PDF", link: "#" },
             { nome: "Resumo da Aula", link: "#" }
         ],
-        opiniao: "..."
+        opiniao: "Uma boa introdução à disciplina, com esclarecimentos importantes sobre o funcionamento e expectativas."
     },
     2: {
         titulo: "Aula 2: Introdução aos conceitos fundamentais",
@@ -67,7 +67,7 @@ const aulasDetalhes = {
             { nome: "Slides da Aula", link: "#" },
             { nome: "Exercícios Práticos", link: "#" }
         ],
-        opiniao: "..."
+        opiniao: "Conteúdos essenciais para compreender a base da programação e desenvolvimento de software."
     },
     3: {
         titulo: "Aula 3: Introdução ao ePortfólio",
@@ -76,7 +76,7 @@ const aulasDetalhes = {
         materiais: [
             { nome: "Material de Apoio", link: "#" }
         ],
-        opiniao: "..."
+        opiniao: "Uma aula útil para entender como documentar e refletir sobre o aprendizado ao longo do periodo escolar."
     },
     4: {
         titulo: "Aula 4: Resolução de exercícios práticos",
@@ -86,16 +86,16 @@ const aulasDetalhes = {
             { nome: "Código Exemplo", link: "#" },
             { nome: "Slides", link: "#" }
         ],
-        opiniao: "..."
+        opiniao: "Exercícios práticos que ajudaram a fixar os conceitos aprendidos."
     },
     5: {
         titulo: "Aula 5: Resolução de exercícios práticos",
         data: "26/09/2025",
         texto: "Resolução de exercícios práticos de modo a rever, aplicar e consolidar os conteúdos abordados até ao momento.",
         materiais: [
-            { nome: "Mapa de Redes", link: "#" }  // <-- sem vírgula aqui, mas a vírgula após o fechamento do array é necessária
+            { nome: "Mapa de Redes", link: "#" }
         ],
-        opiniao: "..."
+        opiniao: "Exercícios práticos que ajudaram a fixar os conceitos aprendidos."
     },
     6: {
         titulo: "Aula 6: Resolução de exercícios práticos",
@@ -105,10 +105,40 @@ const aulasDetalhes = {
             { nome: "Slides Aula 6", link: "#" },
             { nome: "Exercícios Práticos", link: "#" }
         ],
-        opiniao: "..."
+        opiniao: "Exercícios práticos que ajudaram a fixar os conceitos aprendidos."
+    },
+    7: {
+        titulo: "Aula 7: Resolução de exercícios práticos",
+        data: "02/10/2025",
+        texto: "Resolução de exercícios práticos de modo a rever, aplicar e consolidar os conteúdos abordados até ao momento.",
+        materiais: [
+            { nome: "Slides Aula 7", link: "#" },
+            { nome: "Exercícios Práticos", link: "#" }
+        ],
+        opiniao: "Exercícios práticos que ajudaram a fixar os conceitos aprendidos."
+    }, 
+    8: {
+        titulo: "Aula 8: Introdução ao Python",
+        data: "03/10/2025",
+        texto: "Introdução à linguagem de programação Python: características e aplicações. Utilizar um IDE para desenvolvimento e execução de programas. Identificar diferentes tipos de dados. Utilizar variáveis em programas. Elaborar programas em ambiente de consola.",
+        materiais: [
+            { nome: "Slides Aula 8", link: "#" },
+            { nome: "Exercícios Práticos", link: "#" }
+        ],
+        opiniao: "Uma introdução clara e prática ao Python, facilitando o início na programação."
+    }, 
+    9: {
+        titulo: "Aula 9: Resolução de exercícios práticos",
+        data: "03/10/2025",
+        texto: "Resolução de exercícios práticos utilizando a linguagem de programação Python de forma a rever, aplicar e consolidar os conteúdos.",
+        materiais: [
+            { nome: "Slides Aula 9", link: "#" },
+            { nome: "Exercícios Práticos", link: "#" }
+        ],
+        opiniao: "Exercícios práticos que ajudaram a fixar os conceitos aprendidos em Python."
+    }
 }
 
-};
 
 
 function showAulaDetalhe(aulaNum) {
